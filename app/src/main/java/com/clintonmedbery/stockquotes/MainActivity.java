@@ -9,8 +9,10 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
     public TextView lastTradeTimeText;
     public TextView changeText;
     public TextView weekText;
+    public ProgressBar progressBar;
 
 
     @Override
@@ -45,7 +48,9 @@ public class MainActivity extends ActionBarActivity {
         lastTradeTimeText = (TextView) findViewById(R.id.lttText);
         changeText = (TextView) findViewById(R.id.changeText);
         weekText = (TextView) findViewById(R.id.weekText);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
+        progressBar.setVisibility(View.INVISIBLE);
 
         stockText.setFilters(new InputFilter[] {new InputFilter.LengthFilter(4)});
         stockText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -98,6 +103,7 @@ public class MainActivity extends ActionBarActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             //Load Progress Bar
+            progressBar.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -117,6 +123,12 @@ public class MainActivity extends ActionBarActivity {
         }
 
         @Override
+        protected void onProgressUpdate(Integer... values){
+            super.onProgressUpdate(values);
+
+        }
+
+        @Override
         protected void onPostExecute(String result){
             super.onPostExecute(result);
             String checkValidity = stock.getLastTradeTime();
@@ -127,6 +139,8 @@ public class MainActivity extends ActionBarActivity {
 
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
+                progressBar.setVisibility(View.INVISIBLE);
+
             } else {
                 symbolText.setText(stock.getSymbol());
                 nameText.setText(stock.getName());
@@ -134,6 +148,8 @@ public class MainActivity extends ActionBarActivity {
                 lastTradeTimeText.setText(stock.getLastTradeTime());
                 changeText.setText(stock.getChange());
                 weekText.setText(stock.getRange());
+                progressBar.setVisibility(View.INVISIBLE);
+
             }
 
 
