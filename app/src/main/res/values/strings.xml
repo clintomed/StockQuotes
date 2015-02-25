@@ -2,5 +2,11 @@
     <string name="app_name">Stock Quotes</string>
 
     <string name="enter_stock">Enter Stock Symbol: </string>
+    <string name="symbol_text">Symbol:</string>
+    <string name="name_text">Name:</string>
+    <string name="last_trade_price_text">Last Trade Price:</string>
+    <string name="last_trade_time_text">Last Trade Time:</string>
+    <string name="change_text">Change:</string>
+    <string name="week_range_text">52 Week Range:</string>
     <string name="action_settings">Settings</string>
 </resources>

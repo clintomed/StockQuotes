@@ -1,23 +1,151 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
     android:background="@drawable/bg">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <TableRow>
+        <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1.1"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/enter_stock"
-        android:id="@+id/textView"
+        android:id="@+id/enter_text"
         android:textColor="@color/textColor"
         android:textSize="@dimen/text_size" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_weight="1" />
-</LinearLayout>
+        <EditText
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:id="@+id/stockText"
+            android:layout_weight="1"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size"
+            android:backgroundTint="@color/textColor"
+            android:maxLength="4"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/symbolLabel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/symbol_text"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/symbolText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/nameLabel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/name_text"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/nameText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/ltpLabel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/last_trade_price_text"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/ltpText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/ltlLabel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/last_trade_time_text"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/ltlText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/changeLabel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/change_text"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/changeText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/weekLabel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/week_range_text"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/weekText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+
+    </TableRow>
+
+</TableLayout>
