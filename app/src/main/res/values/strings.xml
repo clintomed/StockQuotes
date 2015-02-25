@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Stock Quotes</string>
-
     <string name="enter_stock">Enter Stock Symbol: </string>
     <string name="symbol_text">Symbol:</string>
     <string name="name_text">Name:</string>
