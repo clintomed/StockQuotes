@@ -12,7 +12,7 @@
     <TableRow>
         <TextView
         android:layout_width="0dp"
-        android:layout_weight="1.1"
+        android:layout_weight="1.5"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/enter_stock"
@@ -22,7 +22,6 @@
 
         <EditText
             android:layout_width="0dp"
-
             android:layout_height="wrap_content"
             android:id="@+id/stockText"
             android:layout_weight="1"
@@ -31,7 +30,8 @@
             android:backgroundTint="@color/textColor"
             android:maxLength="4"
             android:imeOptions="actionDone"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:inputType="textCapCharacters"/>
     </TableRow>
 
     <TableRow>
@@ -102,7 +102,7 @@
             android:textSize="@dimen/text_size" />
         <TextView
             android:layout_height="wrap_content"
-            android:id="@+id/ltlText"
+            android:id="@+id/lttText"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textColor="@color/textColor"
